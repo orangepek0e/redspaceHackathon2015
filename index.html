@@ -33,13 +33,21 @@
         </div>
     </div>
 <script>
-    var myDataRef = new Firebase('https://redspace-hackathon.firebaseio.com/');
+    var dataRef = new Firebase('https://redspace-hackathon.firebaseio.com/');
     var userName = '';
     var userScore = '';
     var authModal = $('#auth-modal').modal({show: false});
 
     function logIn(){
         console.log("you are trying to log in");
+
+        dataRef.authWithOAuthPopup("twitter", function(error, authData) {
+            if (error) {
+                console.log("Login Failed!", error);
+            } else {
+                console.log("Authenticated successfully with payload:", authData);
+            }
+        });
     }
 
 </script>
