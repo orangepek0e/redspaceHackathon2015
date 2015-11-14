@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- FIREBASE -->
+		<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+		<!--BOOTSTRAP (CSS)-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<!--BOOTSTRAP (JAVASCRIPT) -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+		<link rel="stylesheet" type='style/css' href="/css/adminStyle.css">
+		<title>Admin</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<h1>Admin</h1>
+						</div>
+						<div class="panel-body">
+							<h3>Meme Theme:</h3><br/>
+							<form role="form">
+								<div class="from-group">
+									
+									<label for="dropdown_title2">Meme Type:</label>
+									<div class="dropdown" id="dropdownMenu2">
+										<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="dropdown_title2">Pick a Meme!
+											<span class="caret"></span></button>
+										<ul id="memeDrop" class="dropdown-menu">
+											<!-- filled from JS -->
+										</ul>
+									</div>
+									
+									<div class="form-group">
+										<label for="uploadImage">Image to upload: </label>
+										<input type="file" class="form-control" id="uploadImage" >
+										<div id="imgTest"></div>
+
+									</div>
+								</div>
+							</form>
+							</div>
+						
+						<div class="panel-footer">
+							<button class="btn btn-primary" id="uploadIt" >Start the challange</button>
+							
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+	</body>
+	<script src="js/admin.js"></script>
+	<script src="js/javascript.js"></script>
+</html>
