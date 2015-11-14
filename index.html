@@ -15,6 +15,8 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
+    <script src="js/twitterAuth.js"></script>
+
     <link rel="stylesheet" type='style/css' href="/css/style.css">
 
 </head>
@@ -32,24 +34,5 @@
             </div>
         </div>
     </div>
-<script>
-    var dataRef = new Firebase('https://redspace-hackathon.firebaseio.com/');
-    var userName = '';
-    var userScore = '';
-    var authModal = $('#auth-modal').modal({show: false});
-
-    function logIn(){
-        console.log("you are trying to log in");
-
-        dataRef.authWithOAuthPopup("twitter", function(error, authData) {
-            if (error) {
-                console.log("Login Failed!", error);
-            } else {
-                console.log("Authenticated successfully with payload:", authData);
-            }
-        });
-    }
-
-</script>
 </body>
 </html>
