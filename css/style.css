@@ -68,7 +68,6 @@ body {
     margin: 20px auto 40px auto;
     box-shadow: 5px 5px 30px #000;
 	background: url("");"../images/fp.jpg");
-    background-size: 100% 100%;
 }
 
 #photoTitle{
@@ -84,62 +83,68 @@ body {
     padding: 0 20px;
 }
 
-.meme1##photoSample{
+.meme1 #photoSample{
 	background: url("../images/cat.jpg");
+    background-size: 100% 100%;
 }
-.meme1#photoTitle{
+.meme1 #photoTitle{
 	content: "Cats!";
 }
-.meme1#photoDec{
+.meme1 #photoDec{
 	content: "";
 }
 
-.meme2#photoSample{
+.meme2 #photoSample{
 	background: url("../images/dive.jpg");
+    background-size: 100% 100%;
 }
-.meme2photoTitle{
+.meme2 #photoTitle{
 	content: "Diving!";
 }
-.meme2photoDec{
+.meme2 #photoDec{
 	content: "";
 }
 
-.meme3#photoSample{
+.meme3 #photoSample{
 	background: url("../images/force.jpg");
+    background-size: 100% 100%;
 }
-.meme3photoTitle{
+.meme3 #photoTitle{
 	content: "";
 }
-.meme3photoDec{
+.meme3 #photoDec{
 	content: "";
 }
 
-.meme4#photoSample{
+.meme4 #photoSample{
 	background: url("../images/force2.jpg");
+    background-size: 100% 100%;
 }
-.meme4photoTitle{
+.meme4 #photoTitle{
 	content: "";
 }
-.meme4photoDec{
+.meme4 #photoDec{
 	content: "";
 }
 
-.meme5#photoSample{
+.meme5 #photoSample{
 	background: url("../images/fp.jpg");
+    background-size: 100% 100%;
 }
-.meme5photoTitle{
+.meme5 #photoTitle{
 	content: "";
 }
-.meme5photoDec{
+.meme5 #photoDec{
 	content: "";
 }
 
-.meme6#photoSample{
+.meme6 #photoSample{
 	background: url("../images/plank.jpg");
+    background-size: 100% 100%;
 }
-.meme6photoTitle{
+.meme6 #photoTitle{
 	content: "";
 }
-.meme6photoDec{
+.meme6 #photoDec{
 	content: "";
 }
