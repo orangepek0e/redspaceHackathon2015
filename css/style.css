@@ -3,9 +3,8 @@
     height: 200px;
     position: relative;
 }
-
-.hidden {
-	display: none;
+#notificationScreen{
+    display: none;
 }
 
 .center{

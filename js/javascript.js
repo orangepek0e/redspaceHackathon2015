@@ -4,13 +4,15 @@ var userName = '';
 var userScore = '';
 var authData = myDataRef.getAuth();
 
+
 if (authData){
     userId = authData.uid;
     setUserNodeId();
     userName = authData[authData.provider].displayName;
     console.log('user is already logged in');
+    $('#loginScreen').toggle();
+    $('#notificationScreen').toggle();
 }
-
 
 function logIn(provider) {
     myDataRef.authWithOAuthPopup(provider, function(error, authData) {
@@ -33,6 +35,8 @@ function logIn(provider) {
                     myDataRef.child('user').child(userId).push({id:userId, name:userName, score:userScore});
                     setUserNodeId();
                 }
+                $('#loginScreen').toggle();
+                $('#notificationScreen').toggle();
             });
         }
     });
