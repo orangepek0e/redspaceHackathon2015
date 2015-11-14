@@ -53,6 +53,8 @@ body {
     border: 3px #fff solid;
     margin: 20px auto 40px auto;
     box-shadow: 5px 5px 30px #000;
+    background: url("../images/fp.jpg");
+    background-size: 100% 100%;
 }
 
 #photoTitle{
