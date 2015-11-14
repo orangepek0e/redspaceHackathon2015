@@ -15,17 +15,17 @@ if (authData){
 
 }
 
-// function authDataCallback(authData) {
-//     if (authData) {
-//         console.log("User " + authData.uid + " is logged in with " + authData.provider);
+function authDataCallback(authData) {
+    if (authData) {
+        console.log("User " + authData.uid + " is logged in with " + authData.provider);
 
 
-//     } else {
-//         console.log("User is logged out");
-//     }
-// }
+    } else {
+        console.log("User is logged out");
+    }
+}
 
-// myDataRef.onAuth(authDataCallback);
+myDataRef.onAuth(authDataCallback);
 
 function logIn(provider) {
     myDataRef.authWithOAuthPopup(provider, function(error, authData) {
@@ -154,8 +154,5 @@ function uploadPhoto() {
         fileReader.readAsDataURL(fileToLoad);
 
     }
-
-}
-
 
 }
