@@ -7,6 +7,19 @@
     display: none;
 }
 
+#photoButton{
+    background-color: #2df6d4;
+    border-radius: 10px;
+    width: 125px;
+    height:40px;
+    display: block;
+    text-align: center;
+    vertical-align: bottom;
+    color:black;
+    font-family: Roboto;
+    font-size: 24px;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
+}
 
 .center{
 	margin-left:auto;
@@ -62,6 +75,7 @@ body {
     font-size: 22px;
     text-transform: uppercase;
     margin-bottom: 5px;
+    color:#2df6d4;
 }
 
 #photoDes{

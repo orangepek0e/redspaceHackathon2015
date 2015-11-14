@@ -99,6 +99,30 @@ function startTimer(duration, display) {
     timer();
     setInterval(timer, 1000);
 }
+function challengePicker() {
+    var challenge = Math.floor((Math.random() * 6) + 1);
+    switch(challenge) {
+        case 1:
+            $('.page-wrapper').addClass("meme1");
+            break;
+        case 2:
+            $('.page-wrapper').addClass("meme2");
+            break;
+        case 3:
+            $('.page-wrapper').addClass("meme3");
+            break;
+        case 4:
+            $('.page-wrapper').addClass("meme4");
+            break;
+        case 5:
+            $('.page-wrapper').addClass("meme5");
+            break;
+        case 6:
+            $('.page-wrapper').addClass("meme6");
+            break;
+
+    }
+}
 
 window.onload = function () {
     var fiveMinutes = 60 * 5,
