@@ -1,22 +1,60 @@
-/**
- * Created by orangepek0e on 15-11-14.
- */
-<script>
-var dataRef = new Firebase('https://redspace-hackathon.firebaseio.com/');
+
+var myDataRef = new Firebase('https://redspace-hackathon.firebaseio.com/');
 var userName = '';
 var userScore = '';
-var authModal = $('#auth-modal').modal({show: false});
+var authData = myDataRef.getAuth();
 
-function logIn(){
-    console.log("you are trying to log in");
+if (authData){
+    userId = authData.uid;
+    setUserNodeId();
+    userName = authData[authData.provider].displayName;
+    console.log('user is already logged in');
+}
 
-    dataRef.authWithOAuthPopup("twitter", function(error, authData) {
+//function logIn(){
+//    console.log("you are trying to log in");
+//
+//    dataRef.authWithOAuthPopup("twitter", function(error, authData) {
+//        if (error) {
+//            console.log("Login Failed!", error);
+//        } else {
+//            console.log("Authenticated successfully with payload:", authData);
+//        }
+//    });
+//}
+
+function logIn(provider) {
+    myDataRef.authWithOAuthPopup(provider, function(error, authData) {
         if (error) {
-            console.log("Login Failed!", error);
-        } else {
+            console.log("login Failed!", error);
+        } else if (authData){
             console.log("Authenticated successfully with payload:", authData);
+            userId = authData.uid;
+            userName = authData[authData.provider].displayName;
+            myDataRef.child('user').child(userId).once("value", function(snapshot) {
+                var ifExists = snapshot.exists(); //a firebase function
+                if (ifExists) {
+                    console.log('user is already in the system');
+                    data = snapshot.val();
+                    for (key in data) {
+                        userNodeId = key;
+                        console.log('user node is 1 ' + userNodeId);
+                    }
+                } else {
+                    myDataRef.child('user').child(userId).push({id:userId, name:userName, score:userScore});
+                    setUserNodeId();
+                }
+            });
         }
     });
 }
 
-</script>
+function setUserNodeId() {
+    myDataRef.child('user').child(userId).once("value", function(snapshot) {
+        data = snapshot.val();
+        for (key in data) {
+            userNodeId = key;
+        }
+    });
+}
+
