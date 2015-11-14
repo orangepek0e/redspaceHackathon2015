@@ -16,34 +16,64 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" type='style/css' href="css/style.css">
     
     <!-- FIREBASE -->
     <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
-
     <!--j-Query-->
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-
     <!--BOOTSTRAP (JAVASCRIPT) -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
     <script src="js/javascript.js"></script>
 
-    <link rel="stylesheet" type='style/css' href="/css/style.css">
-
 </head>
 <body>
-    <div class="container">
+    <div id="loginScreen" class="container">
         <div class="row">
-            <div class="col-xs-12">
-
+            <div class="col-xs-12 logo-container" >
+logo
             </div>
         </div>
 
         <div class="row">
-            <div class="col-xs-12">
-                <button type="button" class="btn btn-primary" onClick="logIn('twitter');">Twitter Login!</button>
+            <div class="col-xs-12 login-container">
+                <div class="center" onClick="logIn('twitter');">
+                <i id="twitter-signin-btn" class="fa fa-twitter fa-4x"></i>
+                <p>Twitter</p>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- notification screen -->
+
+    <div id="notificationScreen" class="container hidden">
+        <div class="row">
+            <div class="col-xs-2">
+                <div id="pics"></div>
+            </div>
+            <div class="col-xs-8">
+                <div class="bombTimer><span id="timer"></span></div>
+            </div>
+            <div class="col-xs-2">
+                <div id="leaders"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="photoSample"></div>
+        </div>
+        <div class="row">
+            <div id="photoTitle"></div>
+        </div>
+        <div class="row">
+            <div id="photoDes"></div>
+        </div>
+        <div class="row">
+            <div id="photoButton">
+                <button type="button" class="btn btn-default">Defuse the bomb!</button>
             </div>
         </div>
     </div>
