@@ -27,8 +27,6 @@
     <!--BOOTSTRAP (JAVASCRIPT) -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-    <script src="js/javascript.js"></script>
-
 </head>
 <body>
     <div class="page-wrapper">
@@ -58,10 +56,10 @@ logo
                 <div id="pics"></div>
             </div>
             <div class="col-xs-8">
-                <div class="bombTimer><span id="timer"></span></div>
+                <div class="bombTimer"><span id="timer"></span></div>
             </div>
             <div class="col-xs-2">
-                <div id="leaders"></div>
+                <div id="leaders"> <button class="btn-warning" type="button" onclick="logout();"</div>
             </div>
         </div>
         <div class="row">
@@ -75,10 +73,11 @@ logo
         </div>
         <div class="row">
             <div id="photoButton">
-                <button type="button" class="btn btn-default">Defuse the bomb!</button>
+                <input id="photoUpload" class="test" type="file" accept="image/*" capture="camera" onchange="uploadPhoto();">>Defuse the bomb!</input>
             </div>
         </div>
     </div>
 
+        <script src="js/javascript.js"></script>
 </body>
 </html>

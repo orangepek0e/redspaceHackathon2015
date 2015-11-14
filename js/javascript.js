@@ -4,15 +4,27 @@ var userName = '';
 var userScore = '';
 var authData = myDataRef.getAuth();
 
-
+console.log(authData);
 if (authData){
     userId = authData.uid;
     setUserNodeId();
     userName = authData[authData.provider].displayName;
     console.log('user is already logged in');
-    $('#loginScreen').toggle();
-    $('#notificationScreen').toggle();
+    //$('#loginScreen').hide();
+    //$('#notificationScreen').show();
+
 }
+function authDataCallback(authData) {
+    if (authData) {
+        console.log("User " + authData.uid + " is logged in with " + authData.provider);
+
+
+    } else {
+        console.log("User is logged out");
+    }
+}
+
+myDataRef.onAuth(authDataCallback);
 
 function logIn(provider) {
     myDataRef.authWithOAuthPopup(provider, function(error, authData) {
@@ -51,6 +63,14 @@ function setUserNodeId() {
     });
 }
 
+function logout() {
+    console.log("logging out")
+    myDataRef.unauth();
+    name = "";
+    id = "";
+    location.reload();
+}
+
 function startTimer(duration, display) {
     var start = Date.now(),
         diff,
@@ -84,3 +104,30 @@ window.onload = function () {
         display = document.querySelector('#time');
     startTimer(fiveMinutes, display);
 };
+
+function uploadPhoto() {
+    var srcData;
+    var file = document.getElementById('photoUpload').files[0];
+    var filesSelected = document.getElementById("photoUpload").files;
+    if (filesSelected.length > 0)
+    {
+        var fileToLoad = filesSelected[0];
+
+        var fileReader = new FileReader();
+
+        fileReader.onload = function(fileLoadedEvent) {
+            srcData = fileLoadedEvent.target.result; // <--- data: base64
+            console.log(srcData + "1");
+            var newImage = document.createElement('img');
+            newImage.src = srcData;
+
+            if(file){
+                myDataRef.child('photos').push({photo:srcData});
+            }
+
+        }
+        fileReader.readAsDataURL(fileToLoad);
+
+    }
+
+}
