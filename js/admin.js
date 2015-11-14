@@ -115,6 +115,24 @@ $( document ).ready(function() {
 			
 		}
 	}
+	
+	
+	$("#startChal").click(function() {
+		var challengeNumber;
+		myDataRef.on("value", function(snaphot) {
+			var holder = snaphot.child("thumbnail");
+			//console.log(holder.numChildren());
+			challengeNumber = Math.floor(Math.random() * holder.numChildren());
+			console.log(challengeNumber);
+		});
+		console.log(challengeNumber);
+		var test
+		if (test == null){
+		myDataRef.child("challenge").push({challengeNumber : challengeNumber});
+			test = 1;
+		}
+		//myDataRef.update({challange: challengeNumber});
+	});
 						 
 });
 

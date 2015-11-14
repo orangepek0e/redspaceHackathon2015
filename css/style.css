@@ -67,7 +67,7 @@ body {
     border: 3px #fff solid;
     margin: 20px auto 40px auto;
     box-shadow: 5px 5px 30px #000;
-    background: url("../images/fp.jpg");
+	background: url("");"../images/fp.jpg");
     background-size: 100% 100%;
 }
 
@@ -82,4 +82,64 @@ body {
 #photoDes{
     text-align: center;
     padding: 0 20px;
+}
+
+.meme1##photoSample{
+	background: url("../images/cat.jpg");
+}
+.meme1#photoTitle{
+	content: "Cats!";
+}
+.meme1#photoDec{
+	content: "";
+}
+
+.meme2#photoSample{
+	background: url("../images/dive.jpg");
+}
+.meme2photoTitle{
+	content: "Diving!";
+}
+.meme2photoDec{
+	content: "";
+}
+
+.meme3#photoSample{
+	background: url("../images/force.jpg");
+}
+.meme3photoTitle{
+	content: "";
+}
+.meme3photoDec{
+	content: "";
+}
+
+.meme4#photoSample{
+	background: url("../images/force2.jpg");
+}
+.meme4photoTitle{
+	content: "";
+}
+.meme4photoDec{
+	content: "";
+}
+
+.meme5#photoSample{
+	background: url("../images/fp.jpg");
+}
+.meme5photoTitle{
+	content: "";
+}
+.meme5photoDec{
+	content: "";
+}
+
+.meme6#photoSample{
+	background: url("../images/plank.jpg");
+}
+.meme6photoTitle{
+	content: "";
+}
+.meme6photoDec{
+	content: "";
 }
