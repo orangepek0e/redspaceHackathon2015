@@ -102,6 +102,7 @@ function startTimer(duration, display) {
 }
 function challengePicker() {
     var challenge = Math.floor((Math.random() * 6) + 1);
+	console.log("made it");
     switch(challenge) {
         case 1:
             $('#notificationScreen').addClass("meme1");
