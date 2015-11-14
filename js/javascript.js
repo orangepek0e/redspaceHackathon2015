@@ -4,7 +4,7 @@ var userName = '';
 var userScore = '';
 var authData = myDataRef.getAuth();
 
-console.log(authData);
+console.log("aut:" + authData);
 if (authData){
     userId = authData.uid;
     setUserNodeId();
@@ -14,17 +14,18 @@ if (authData){
     //$('#notificationScreen').show();
 
 }
-function authDataCallback(authData) {
-    if (authData) {
-        console.log("User " + authData.uid + " is logged in with " + authData.provider);
+
+// function authDataCallback(authData) {
+//     if (authData) {
+//         console.log("User " + authData.uid + " is logged in with " + authData.provider);
 
 
-    } else {
-        console.log("User is logged out");
-    }
-}
+//     } else {
+//         console.log("User is logged out");
+//     }
+// }
 
-myDataRef.onAuth(authDataCallback);
+// myDataRef.onAuth(authDataCallback);
 
 function logIn(provider) {
     myDataRef.authWithOAuthPopup(provider, function(error, authData) {
@@ -87,7 +88,7 @@ function startTimer(duration, display) {
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
-        display.textContent = minutes + ":" + seconds;
+        // display.textContent = minutes + ":" + seconds;
 
         if (diff <= 0) {
 
@@ -129,5 +130,8 @@ function uploadPhoto() {
         fileReader.readAsDataURL(fileToLoad);
 
     }
+
+}
+
 
 }
