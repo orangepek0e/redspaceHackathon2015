@@ -38,4 +38,6 @@ body {
 .login-container {
     text-align: center;
     color: #fff;
+
+    cursor: pointer;
 }
