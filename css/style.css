@@ -48,7 +48,7 @@ body {
     height: 300px;
     text-align: center;
     padding-top: 100px;
-    background: url("../images/logo.png");
+    background-image: url("../images/logo.png");
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -88,8 +88,8 @@ margin-top: 10px;
 }
 
 .meme1 #photoSample{
-	background: url("../images/cat.jpg");
-    background-size: 100% 100%;
+	background-image: url("../images/cat.jpg");
+    background-size: cover;
 }
 .meme1 #photoTitle:after{
 	content: "Pet Breading";
@@ -99,8 +99,8 @@ margin-top: 10px;
 }
 
 .meme2 #photoSample{
-	background: url("../images/dive.jpg");
-    background-size: 100% 100%;
+	background-image: url("../images/dive.jpg");
+    background-size: cover;
 }
 .meme2 #photoTitle:after{
 	content: "Leisure Diving";
@@ -110,8 +110,8 @@ margin-top: 10px;
 }
 
 .meme3 #photoSample{
-	background: url("../images/force.jpg");
-    background-size: 100% 100%;
+	background-image: url("../images/force.jpg");
+    background-size: cover;
 }
 .meme3 #photoTitle:after{
 	content: "Photobomb";
@@ -121,8 +121,8 @@ margin-top: 10px;
 }
 
 .meme4 #photoSample{
-	background: url("../images/force2.jpg");
-    background-size: 100% 100%;
+	background-image: url("../images/force2.jpg");
+    background-size: cover;
 }
 .meme4 #photoTitle:after{
 	content: "Use the force";
@@ -132,8 +132,8 @@ margin-top: 10px;
 }
 
 .meme5 #photoSample{
-	background: url("../images/fp.jpg");
-    background-size: 100% 100%;
+	background-image: url("../images/fp.jpg");
+    background-size: cover;
 }
 .meme5 #photoTitle:after{
 	content: "Forced Perspective";
@@ -143,8 +143,8 @@ margin-top: 10px;
 }
 
 .meme6 #photoSample{
-	background: url("../images/plank.jpg");
-    background-size: 100% 100%;
+	background-image: url("../images/plank.jpg");
+    background-size: cover;
 }
 .meme6 #photoTitle:after{
 	content: "Planking";
