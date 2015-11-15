@@ -100,6 +100,14 @@ function startTimer(duration, display) {
     timer();
     setInterval(timer, 1000);
 }
+
+// window.onload = function () {
+//     var fiveMinutes = 60 * 5,
+//         display = document.querySelector('#time');
+//     startTimer(fiveMinutes, display);
+// };
+
+
 function challengePicker() {
     var challenge = Math.floor((Math.random() * 6) + 1);
 	console.log("made it");
@@ -126,12 +134,6 @@ function challengePicker() {
     }
 }
 
-window.onload = function () {
-    var fiveMinutes = 60 * 5,
-        display = document.querySelector('#time');
-    startTimer(fiveMinutes, display);
-};
-
 function uploadPhoto() {
     var srcData;
     var file = document.getElementById('photoUpload').files[0];
@@ -139,9 +141,8 @@ function uploadPhoto() {
     if (filesSelected.length > 0)
     {
         var fileToLoad = filesSelected[0];
-
         var fileReader = new FileReader();
-
+        
         fileReader.onload = function(fileLoadedEvent) {
             srcData = fileLoadedEvent.target.result; // <--- data: base64
             console.log(srcData + "1");

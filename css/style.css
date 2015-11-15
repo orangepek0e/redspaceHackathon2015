@@ -78,6 +78,10 @@ body {
     color:#2df6d4;
 }
 
+.topMargin{
+margin-top: 10px;
+}
+
 #photoDes{
     text-align: center;
     padding: 0 20px;
@@ -87,64 +91,64 @@ body {
 	background: url("../images/cat.jpg");
     background-size: 100% 100%;
 }
-.meme1 #photoTitle{
-	content: "Cats!";
+.meme1 #photoTitle:after{
+	content: "Pet Breading";
 }
-.meme1 #photoDec{
-	content: "";
+.meme1 #photoDes:after{
+	content: "We think its hilarious but they are probably plotting our demise. But it’s just so damn fashionable! Take a slice of bread, and frame your pet’s face with it.";
 }
 
 .meme2 #photoSample{
 	background: url("../images/dive.jpg");
     background-size: 100% 100%;
 }
-.meme2 #photoTitle{
-	content: "Diving!";
+.meme2 #photoTitle:after{
+	content: "Leisure Diving";
 }
-.meme2 #photoDec{
-	content: "";
+.meme2 #photoDes:after{
+	content: "Diving couldn’t be more relaxed. Head over to your favourite swimming spot, get a running start, jump in and make look as effortless as possible.";
 }
 
 .meme3 #photoSample{
 	background: url("../images/force.jpg");
     background-size: 100% 100%;
 }
-.meme3 #photoTitle{
-	content: "";
+.meme3 #photoTitle:after{
+	content: "Photobomb";
 }
-.meme3 #photoDec{
-	content: "";
+.meme3 #photoDes:after{
+	content: "When opportunity presents itself, you just need to completely ruin a nice photo. Make a funny face in a family portrait, jump into the background of a vacation photo, or just make your friends feel uncomfortable in their next selfie.";
 }
 
 .meme4 #photoSample{
 	background: url("../images/force2.jpg");
     background-size: 100% 100%;
 }
-.meme4 #photoTitle{
-	content: "";
+.meme4 #photoTitle:after{
+	content: "Use the force";
 }
-.meme4 #photoDec{
-	content: "";
+.meme4 #photoDes:after{
+	content: "Do or do not, there is no try. Use the powers of the force to push, choke and control others to your bidding!";
 }
 
 .meme5 #photoSample{
 	background: url("../images/fp.jpg");
     background-size: 100% 100%;
 }
-.meme5 #photoTitle{
-	content: "";
+.meme5 #photoTitle:after{
+	content: "Forced Perspective";
 }
-.meme5 #photoDec{
-	content: "";
+.meme5 #photoDes:after{
+	content: "Change the size of everyday objects to enormous sizes. Near objects appear large and far objects appear small Change the size of everyday objects to enormous sizes. Near objects appear large and far objects appear small.";
 }
 
 .meme6 #photoSample{
 	background: url("../images/plank.jpg");
     background-size: 100% 100%;
 }
-.meme6 #photoTitle{
-	content: "";
+.meme6 #photoTitle:after{
+	content: "Planking";
 }
-.meme6 #photoDec{
-	content: "";
+.meme6 #photoDes:after{
+	content: "The one that started it all. Lie down flat with your arms to your side in the most creative places you can think of! Remember, safety first – that perfect photo isn’t worth a trip to the hospital.";
 }
